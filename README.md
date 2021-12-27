@@ -1,8 +1,10 @@
 # Go_Bypass
 一个免杀生成器模板，目前可以过国内主流杀毒。
 
+
 使用方法：
 go run main -h
+可以使用Garbel混淆
 ![image](https://user-images.githubusercontent.com/82130343/147438586-2ec0c4d5-2e8b-4689-a203-1236afc44f2e.png)
 
 测试：
