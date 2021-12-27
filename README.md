@@ -1,7 +1,5 @@
 # Go_Bypass
 一个免杀生成器模板，目前可以过国内主流杀毒。
-## 微信公众：一颗好韭菜
-![8da12679da6d22c1c68464f4c1d64f8](https://user-images.githubusercontent.com/82130343/147440529-e6efd14d-6d2b-4161-9e9e-3543877539cb.jpg)
 
 使用方法：
 go run main -h
@@ -15,3 +13,5 @@ go run main -h
 
 卡巴动态执行死，其他过动态的模板暂时不发出来，发出来没的玩了。
 后续模等待添加.............
+## 微信公众：一颗好韭菜
+![8da12679da6d22c1c68464f4c1d64f8](https://user-images.githubusercontent.com/82130343/147440529-e6efd14d-6d2b-4161-9e9e-3543877539cb.jpg)
