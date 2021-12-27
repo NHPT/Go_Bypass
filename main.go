@@ -14,7 +14,7 @@ var (
 	aesmode int = 1
 	aeskey      = "sangfor@2021"
 	tplname int = 1
-	xid 	int
+	xid 	int = 1
 	//shellcode     = []byte{
 	//	//calc.exe https://github.com/peterferrie/win-exec-calc-shellcode
 	//	0x31, 0xc0, 0x50, 0x68, 0x63, 0x61, 0x6c, 0x63,
