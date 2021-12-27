@@ -1,6 +1,6 @@
 # Go_Bypass
 一个免杀生成器模板，目前可以过国内主流杀毒。
-
+Bypass Av
 
 使用方法：
 go run main -h
