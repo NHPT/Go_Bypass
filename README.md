@@ -13,6 +13,7 @@ go run main -h
 ![image](https://user-images.githubusercontent.com/82130343/147844227-47d46c2b-0a63-4c39-97ff-c65d7c33b764.png)
 ### 上线
 ![image](https://user-images.githubusercontent.com/82130343/147844234-3580502d-ed13-4be9-89e9-2fb4ad7e0b5f.png)
+![631dd04ce2b3c5f548ad8b99c979db5](https://user-images.githubusercontent.com/82130343/147847431-cd4cfb42-ca9b-4a05-aca3-1ab0f2d80eea.png)
 
 收回之前的话，卡巴动态也发出来给大家玩了！
 
