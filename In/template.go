@@ -16,7 +16,7 @@ import (
 func Tpl_go(enshell ,key string, keymode int,s string) string {
 	//取模板名字
 	sname := tplname(s)
-	tpl(enshell,key, sname)
+	tpl(enshell,key, sname,keymode)
 
 	randomStr := CreateRandomString(6)
 	Filename := randomStr + ".exe"
@@ -32,12 +32,13 @@ func Tpl_go(enshell ,key string, keymode int,s string) string {
 }
 
 func tpl(tshell, key,tplname string,Kmode int) {
+	smode :=fmt.Sprintf("%d", Kmode)
 	type Inventory struct {
 		Exshell string
 		AesKey	string
-		keymode int
+		Keymode string
 	}
-	Texts := Inventory{tshell,key,Kmode}
+	Texts := Inventory{tshell,key,smode}
 	gname := movfile(tplname)
 	tmpl, err := template.ParseFiles(tplname)
 	file, err := os.OpenFile(gname, os.O_CREATE|os.O_WRONLY, 0755)
@@ -69,14 +70,6 @@ func CreateRandomString(len int) string {
 //判断选择模板类型  后期需要在添加
 func tplname(src string) string {
 	var name string
-	//if src == 1 {
-	//	name = "./In/template/1"
-	//}else if src ==2 {
-	//	name = "./In/template/2"
-	//}else if src ==3 {
-	//	name = "./In/template/3"
-	//}
-
 	name = "./In/template/"+src
 
 	return name
