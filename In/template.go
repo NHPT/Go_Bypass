@@ -71,7 +71,6 @@ func CreateRandomString(len int) string {
 func tplname(src string) string {
 	var name string
 	name = "./In/template/"+src
-
 	return name
 
 }
