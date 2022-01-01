@@ -13,7 +13,7 @@ import (
 )
 
 //修改模板并生成免杀文件
-func Tpl_go(enshell ,key string, s int) string {
+func Tpl_go(enshell ,key string, keymode int,s string) string {
 	//取模板名字
 	sname := tplname(s)
 	tpl(enshell,key, sname)
@@ -66,12 +66,9 @@ func CreateRandomString(len int) string {
 }
 
 //判断选择模板类型  后期需要在添加
-func tplname(src int) string {
-	var name string
-	if src == 1 {
-		name = "./In/template/1"
-	}
+func tplname(src string) string {
 
+	name := "./In/template/"+sr
 	return name
 
 }
