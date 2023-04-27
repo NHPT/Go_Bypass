@@ -18,5 +18,5 @@ go run main -h
 收回之前的话，卡巴动态也发出来给大家玩了！
 
 后续模等待添加.............
-## 微信公众：一颗好韭菜
-![8da12679da6d22c1c68464f4c1d64f8](https://user-images.githubusercontent.com/82130343/147440529-e6efd14d-6d2b-4161-9e9e-3543877539cb.jpg)
+## 微信公众：Hack All
+![wechat](https://github.com/NHPT/NHPT/blob/main/wechat.png)
